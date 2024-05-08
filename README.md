@@ -5,6 +5,7 @@
 • [2] Main Functions Explained <br>
 • [3] Side Functions Explained <br>
 • [4] Data Type Conversion <br>
+• [5] Combining The Functions <br>
 
 </div>
 
@@ -120,5 +121,5 @@ NXHK_SAVE(NXHK_FILEDIR(PathToFolder), FileName, NXHK_TOSTRING(ContentToSave), Sp
 
 // LOAD FUNCTION
 std::string TestVariable;
-TestVariable = NXHK_LOAD(NXHK_FILEDIR(PathToFolder), FileName, SpecifiedLine);
+TestVariable = NXHK_TO_INT(NXHK_LOAD(NXHK_FILEDIR(PathToFolder), FileName, SpecifiedLine));
 ```
