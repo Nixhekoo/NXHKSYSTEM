@@ -1,11 +1,11 @@
 <div align="center">
 <h1 align=center>Nixhekoo's File System</h1>
-• [0] About the Header <br>
-• [1] How to Use <br>
-• [2] Main Functions Explained <br>
-• [3] Side Functions Explained <br>
-• [4] Data Type Conversion <br>
-• [5] Combining The Functions <br>
+• [0] [About the Header](https://github.com/Nixhekoo/NXHK_FILESYSTEM?tab=readme-ov-file#about-the-header) <br>
+• [1] [How to Use](https://github.com/Nixhekoo/NXHK_FILESYSTEM?tab=readme-ov-file#how-to-use) <br>
+• [2] [Main Functions Explained](https://github.com/Nixhekoo/NXHK_FILESYSTEM?tab=readme-ov-file#main-functions-explained) <br>
+• [3] [Side Functions Explained](https://github.com/Nixhekoo/NXHK_FILESYSTEM?tab=readme-ov-file#side-functions-explained) <br>
+• [4] [Data Type Conversion](https://github.com/Nixhekoo/NXHK_FILESYSTEM?tab=readme-ov-file#data-type-conversion) <br>
+• [5] [Combining The Functions](https://github.com/Nixhekoo/NXHK_FILESYSTEM?tab=readme-ov-file#combining-the-functions) <br>
 
 </div>
 
