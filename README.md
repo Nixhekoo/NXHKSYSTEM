@@ -40,7 +40,7 @@
 > ***FileName*** = String <br>
 > ***ContentToSave*** = Any Type <br>
 > ***LineToSaveOn*** = Integer <br>
-1. PathToFolder = *This is the path to the folder where you want your files to be saved in. If you want to have you'r files saved in localappdata of Windows, use the [NXHK_FILEDIR](https://github.com/Nixhekoo/NXHK_FILESYSTEM?tab=readme-ov-file#nxhk_filedir) function*
+1. PathToFolder = *This is the path to the folder where you want your files to be saved in. If you want to have your files saved in localappdata of Windows, use the [NXHK_FILEDIR](https://github.com/Nixhekoo/NXHK_FILESYSTEM?tab=readme-ov-file#nxhk_filedir) function*
 2. FileName = *This is the name of the file where the data should be stored. The data can be stored in almost any file type.*
 3. ContentToSave = *This is the content you want to save. If you dont like converting types to string, use the [NXHK_TOSTRING](https://github.com/Nixhekoo/NXHK_FILESYSTEM?tab=readme-ov-file#nxhk_tostring) function to help you*
 4. LineToSaveOn = *This is the specified line by user, that determines on which line you want to save the ***ContentToSave***.*
