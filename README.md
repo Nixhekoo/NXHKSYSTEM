@@ -4,6 +4,7 @@
 • [1] How to Use <br>
 • [2] Main Functions Explained <br>
 • [3] Side Functions Explained <br>
+• [4] Data Type Conversion <br>
 
 </div>
 
@@ -96,7 +97,7 @@ C:\Users\Admin\AppData\Local\Projects\Folder
 > [!IMPORTANT]
 > Do NOT use backslash at the beginning of the Path, that will be automatically added by the function!
 
-## NXHK CONVERSION
+# DATA TYPE CONVERSION
 - Use ***NXHK_TO_STRING*** to convert a data type to string.
 - Use ***NXHK_TO_INT*** to convert a string to Integer.
 - Use ***NXHK_TO_FLOAT*** to convert a string to Floating Number.
