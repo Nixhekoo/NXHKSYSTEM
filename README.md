@@ -71,18 +71,19 @@ NXHK_SAVE(PathToFolder, FileName, NXHK_TOSTRING(ContentToSave), LineToSaveOn);
 1. AnythingYouWant = You can enter information of any data type and it will get converted to String. Useful for NXHK_SAVE
 
 ## NXHK_FILEDIR
-- The correct syntax for this function is:
+> [!IMPORTANT]
+> Use "" symbols around the PathToFolder inside NXHK_FILEDIR function.
 ```
 NXHK_FILEDIR(PathFromLocalappdata);
 ```
 - The correct syntax to use this function inside ***NXHK_SAVE*** or ***NXHK_LOAD*** is:
 ```
 // SAVE FUNCTION
-NXHK_SAVE(NXHK_FILEDIR(PathToFolder), FileName, ContentToSave, LineToSaveOn);
+NXHK_SAVE(NXHK_FILEDIR("PathToFolder"), FileName, ContentToSave, LineToSaveOn);
 
 // LOAD FUNCTION
 std::string TestVariable;
-TestVariable = NXHK_LOAD(NXHK_FILEDIR(PathToFolder), FileName, LineToSaveOn);
+TestVariable = NXHK_LOAD(NXHK_FILEDIR("PathToFolder"), FileName, LineToSaveOn);
 ```
 1. PathFromLocalappdata = This is the path that will be placed in Localappdata of Windows. For example this:
 ```
