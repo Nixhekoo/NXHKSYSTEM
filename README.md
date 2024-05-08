@@ -4,7 +4,6 @@
 • [1] How to Use <br>
 • [2] Main Functions Explained <br>
 • [3] Side Functions Explained <br>
-• [4] Source Code <br>
 
 </div>
 
@@ -48,14 +47,14 @@
 ## NXHK_SAVE
 - The syntax for this function is as follows:
 ```
-NXHK_SAVE(<PathToFolder>, <FileName>, <ContentToSave>, <LineToSaveOn>);
+NXHK_SAVE(PathToFolder, FileName, ContentToSave, LineToSaveOn);
 ```
 
 ## NXHK_LOAD
 - The syntax for this function is as follows:
 ```
 std::string TestVariable;
-TestVariable = NXHK_LOAD(<PathToFolder>, <FileName>, <LineToSaveOn>);
+TestVariable = NXHK_LOAD(PathToFolder, FileName, LineToSaveOn);
 ```
 - This function will return the value of the Line from the specified File as String. 
 
@@ -63,27 +62,27 @@ TestVariable = NXHK_LOAD(<PathToFolder>, <FileName>, <LineToSaveOn>);
 ## NXHK_TOSTRING
 - The correct syntax for this function is:
 ```
-NXHK_TOSTRING(<AnythingYouWant>);
+NXHK_TOSTRING(AnythingYouWant);
 ```
 - The correct syntax to use this function inside ***NXHK_SAVE*** is:
 ```
-NXHK_SAVE(<PathToFolder>, <FileName>, NXHK_TOSTRING(ContentToSave), <LineToSaveOn>);
+NXHK_SAVE(PathToFolder, FileName, NXHK_TOSTRING(ContentToSave), LineToSaveOn);
 ```
 1. AnythingYouWant = You can enter information of any data type and it will get converted to String. Useful for NXHK_SAVE
 
 ## NXHK_FILEDIR
 - The correct syntax for this function is:
 ```
-NXHK_FILEDIR(<PathFromLocalappdata>);
+NXHK_FILEDIR(PathFromLocalappdata);
 ```
 - The correct syntax to use this function inside ***NXHK_SAVE*** or ***NXHK_LOAD*** is:
 ```
 // SAVE FUNCTION
-NXHK_SAVE(NXHK_FILEDIR(PathToFolder), <FileName>, <ContentToSave>, <LineToSaveOn>);
+NXHK_SAVE(NXHK_FILEDIR(PathToFolder), FileName, ContentToSave, LineToSaveOn);
 
 // LOAD FUNCTION
 std::string TestVariable;
-TestVariable = NXHK_LOAD(NXHK_FILEDIR(PathToFolder), <FileName>, <LineToSaveOn>);
+TestVariable = NXHK_LOAD(NXHK_FILEDIR(PathToFolder), FileName, LineToSaveOn);
 ```
 1. PathFromLocalappdata = This is the path that will be placed in Localappdata of Windows. For example this:
 ```
@@ -100,12 +99,9 @@ C:\Users\Admin\AppData\Local\Projects\Folder
 - You can also combine multiple functions into one. (Atleast those that are compatibile with eachother). As of right now, only NXHK_SAVE and NXHK_LOAD are compatibile with other functions.
 ```
 // SAVE FUNCTION
-NXHK_SAVE(NXHK_FILEDIR(PathToFolder), <FileName>, NXHK_TOSTRING(ContentToSave), <LineToSaveOn>);
+NXHK_SAVE(NXHK_FILEDIR(PathToFolder), FileName, NXHK_TOSTRING(ContentToSave), LineToSaveOn);
 
 // LOAD FUNCTION
 std::string TestVariable;
-TestVariable = NXHK_LOAD(NXHK_FILEDIR(PathToFolder), <FileName>, <LineToSaveOn>);
+TestVariable = NXHK_LOAD(NXHK_FILEDIR(PathToFolder), FileName, LineToSaveOn);
 ```
-
-## Source Code
-- Click on this: [NXHK_FILESYSTEM.zip](https://github.com/Nixhekoo/NXHK_FILESYSTEM/archive/refs/heads/main.zip)
