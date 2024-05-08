@@ -5,16 +5,88 @@
 #include <type_traits>
 #include <sstream>
 
+
+
+
+
 std::ofstream FileOut;
 std::ifstream FileIn;
 
+
+
+
+// NIXHEKOO - CREATE PATH (IF NOT EXIST)
+void NXHK_CREATEPATH(std::string PATH){
+    std::string tempmessage = "if not exist \"" + PATH + "\" (md \"" + PATH + "\")";
+    system(tempmessage.c_str());
+}
+
+
+
+
+
 // NIXHEKOO - CONVERT TO STRING
 template<typename T>
-std::string NXHK_TOSTRING(const T& VALUE){
+std::string NXHK_TO_STRING(const T& VALUE){
     std::stringstream ss;
     ss << VALUE;
     return ss.str();
 }
+
+
+
+
+// NIXHEKOO - CONVERT DATA TYPE TO INTEGER
+template<typename T>
+int NXHK_TO_INT(const T& VALUE){
+    int tempInt;
+    std::stringstream ss(VALUE);
+    ss >> tempInt;
+    return tempInt;
+}
+
+
+
+
+// NIXHEKOO - CONVERT DATA TYPE TO BOOLIAN
+template<typename T>
+bool NXHK_TO_BOOL(const T& VALUE){
+    int tempInt;
+    std::stringstream ss(VALUE);
+    ss >> tempInt;
+    if(tempInt == 1){
+        return true;
+    } else if(tempInt == 0){
+        return false;
+    } else {
+        return -1;
+    }
+}
+
+
+
+
+// NIXHEKOO - CONVERT DATA TYPE TO FLOAT
+template<typename T>
+float NXHK_TO_FLOAT(const T& VALUE){
+    float tempFloat;
+    std::stringstream ss(VALUE);
+    ss >> tempFloat;
+    return tempFloat;
+}
+
+
+
+
+// NIXHEKOO - CONVERT DATA TYPE TO CHAR
+template<typename T>
+char NXHK_TO_CHAR(const T& VALUE){
+    return VALUE[0];
+}
+
+
+
+
 
 // NIXHEKOO - FIND FILE DIRECTORY
 std::string NXHK_FILEDIR(std::string PATH){
@@ -29,17 +101,16 @@ std::string NXHK_FILEDIR(std::string PATH){
     }
     const char *filenametodelete = "savelocation.txt";
     std::remove(filenametodelete);
-    return temp + PATH;
+    NXHK_CREATEPATH(temp + "\\" + PATH);
+    return temp + "\\" + PATH;
 }
 
-// NIXHEKOO - CREATE PATH (IF NOT EXIST)
-void NXHK_CREATEPATH(std::string PATH){
-    std::string temp = "if not exist \"" + PATH + "\" (md \"" + PATH + "\")";
-    system(temp.c_str());
-}
+
+
+
 
 // NIXHEKOO - SAVE DATA TO FILE
-void NXHK_SAVE(std::string FOLDERPATH, std::string FILEPATH, std::string CONTENT, int LINE){
+void NXHK_SAVE(std::string FOLDERPATH, std::string FILENAME, std::string CONTENT, int LINE){
 
 
     // Creates folder if it doesnt exist yet
@@ -47,7 +118,7 @@ void NXHK_SAVE(std::string FOLDERPATH, std::string FILEPATH, std::string CONTENT
 
 
     // Sets up local variables
-    std::string FULLPATH = FOLDERPATH + "\\" + FILEPATH;
+    std::string FULLPATH = FOLDERPATH + "\\" + FILENAME;
     std::string TEMPPATH = FOLDERPATH + "\\" + "NXHKTEMPORARY.nxhksystem";
     int currentline = 1;
     std::string linecontent;
@@ -110,8 +181,12 @@ void NXHK_SAVE(std::string FOLDERPATH, std::string FILEPATH, std::string CONTENT
     std::rename(oldfilename, newfilename);
 }
 
-// NIXHEKOO - LOAD DATA FROM FILE
-std::string NXHK_LOAD(std::string FOLDERPATH, std::string FILEPATH, int LINE){
+
+
+
+
+// NIXHEKOO - LOAD STRING DATA FROM FILE
+std::string NXHK_LOAD(std::string FOLDERPATH, std::string FILENAME, int LINE){
 
 
     // Creates folder if it doesnt exist yet
@@ -119,7 +194,7 @@ std::string NXHK_LOAD(std::string FOLDERPATH, std::string FILEPATH, int LINE){
 
 
     // Sets up local variables
-    std::string FULLPATH = FOLDERPATH + "\\" + FILEPATH;
+    std::string FULLPATH = FOLDERPATH + "\\" + FILENAME;
     int currentline = 1;
     std::string linecontent;
 
@@ -145,7 +220,7 @@ std::string NXHK_LOAD(std::string FOLDERPATH, std::string FILEPATH, int LINE){
             currentline++;
         }
     }
-    
+
 
     // Close File if it is open
     FileIn.close();
@@ -155,5 +230,5 @@ std::string NXHK_LOAD(std::string FOLDERPATH, std::string FILEPATH, int LINE){
     }
 
 
-    return "";
+    return "0";
 }
