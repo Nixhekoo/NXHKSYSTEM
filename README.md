@@ -33,7 +33,7 @@
 
 # Main Functions Explained
 > [!IMPORTANT]
-> ***Use the Correct Types!*** <br>
+> ***Explanation & The Correct Types!*** <br>
 > <br>
 > ***PathToFolder*** = String <br>
 > ***FileName*** = String <br>
@@ -44,13 +44,13 @@
 3. ContentToSave = *This is the content you want to save. If you dont like converting types to string, use the [NXHK_TOSTRING](https://github.com/Nixhekoo/NXHK_FILESYSTEM?tab=readme-ov-file#nxhk_tostring) function to help you*
 4. LineToSaveOn = *This is the specified line by user, that determines on which line you want to save the ***ContentToSave***.*
 
-## NXHK_SAVE
+## NXHK_SAVE 💾
 - The syntax for this function is as follows:
 ```
 NXHK_SAVE(PathToFolder, FileName, ContentToSave, LineToSaveOn);
 ```
 
-## NXHK_LOAD
+## NXHK_LOAD 💾
 - The syntax for this function is as follows:
 ```
 std::string TestVariable;
