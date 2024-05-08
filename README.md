@@ -48,7 +48,7 @@ NXHK_SAVE(<PathToFolder>, <FileName>, <ContentToSave>, <LineToSaveOn>);
 > ***LineToSaveOn*** = Integer <br>
 1. PathToFolder = This is the path to the folder where you want your files to be saved in.
 2. FileName = This is the name of the file where the data should be stored. The data can be stored in almost any file type.
-3. ContentToSave = This is the content you want to save. It is supposed to be String only but you can use [NXHK_TOSTRING](https://github.com/Nixhekoo/NXHK_FILESYSTEM/edit/main/README.md#nxhk_tostring)
+3. ContentToSave = This is the content you want to save. It is supposed to be String only but you can use [NXHK_TOSTRING](https://github.com/Nixhekoo/NXHK_FILESYSTEM?tab=readme-ov-file#nxhk_tostring)
 
 # Side Functions Explained
 ## NXHK_TOSTRING
