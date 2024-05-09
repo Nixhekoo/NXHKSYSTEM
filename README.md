@@ -83,11 +83,11 @@ NXHK_FILEDIR(PathFromLocalappdata);
 - The correct syntax to use this function inside ***NXHK_SAVE*** or ***NXHK_LOAD*** is:
 ```
 // SAVE FUNCTION
-NXHK_SAVE(NXHK_FILEDIR("PathToFolder"), FileName, ContentToSave, SpecifiedLine);
+NXHK_SAVE(NXHK_FILEDIR("PathFromLocalappdata"), FileName, ContentToSave, SpecifiedLine);
 
 // LOAD FUNCTION
 std::string TestVariable;
-TestVariable = NXHK_LOAD(NXHK_FILEDIR("PathToFolder"), FileName, SpecifiedLine);
+TestVariable = NXHK_LOAD(NXHK_FILEDIR("PathFromLocalappdata"), FileName, SpecifiedLine);
 ```
 1. PathFromLocalappdata = This is the path that will be placed in Localappdata of Windows. For example this:
 ```
