@@ -38,10 +38,15 @@
 > ***FileName*** = String <br>
 > ***ContentToSave*** = Any Type <br>
 > ***SpecifiedLine*** = Integer <br>
+> ***PathFromLocalappdata*** = String <br>
 1. PathToFolder = *This is the path to the folder where you want your files to be saved in. If you want to have your files saved in localappdata of Windows, use the [NXHK_FILEDIR](https://github.com/Nixhekoo/NXHK_FILESYSTEM?tab=readme-ov-file#nxhk_filedir) function*
 2. FileName = *This is the name of the file where the data should be stored. The data can be stored in almost any file type.*
 3. ContentToSave = *This is the content you want to save. If you dont like converting types to string, use the [NXHK_TOSTRING](https://github.com/Nixhekoo/NXHK_FILESYSTEM?tab=readme-ov-file#nxhk_tostring) function to help you*
 4. SpecifiedLine = *This is the specified line by user, that determines on which line you want to save the ***ContentToSave***.*
+5. PathFromLocalappdata = Only availible in [NXHK_FILEDIR](https://github.com/Nixhekoo/NXHK_FILESYSTEM?tab=readme-ov-file#nxhk_filedir) function. Path of the folder from localappdata. Example: if you want to create folder in Localappdata with name Folder90, you would do so like this:
+```
+NXHK_FILEDIR("Folder90");
+```
 
 ## NXHK_SAVE 💾
 - The syntax for this function is as follows:
@@ -94,6 +99,16 @@ C:\Users\Admin\AppData\Local\Projects\Folder
 ```
 > [!IMPORTANT]
 > Do NOT use backslash at the beginning of the Path, that will be automatically added by the function!
+
+## NXHK_FILEEXISTS
+- Function that checks if the save file exists. Correct syntax is as follows:
+```
+NXHK_FILEEXISTS(PathToFolder, FileName);
+```
+- Best paired with [NXHK_FILEDIR](https://github.com/Nixhekoo/NXHK_FILESYSTEM?tab=readme-ov-file#nxhk_filedir) like so:
+```
+NXHK_FILEEXISTS(NXHK_FILEDIR(PathFromLocalappdata), FileName);
+```
 
 # DATA TYPE CONVERSION
 - Use ***NXHK_TO_STRING*** to convert a data type to string.
