@@ -1,4 +1,4 @@
-# Nixhekoo's File System
+# Nixhekoo's System
 0. [About the Header](https://github.com/Nixhekoo/NXHKSYSTEM?tab=readme-ov-file#about-the-header) <br>
 1. [How to Use](https://github.com/Nixhekoo/NXHKSYSTEM?tab=readme-ov-file#how-to-use) <br>
 2. [Main Functions Explained](https://github.com/Nixhekoo/NXHKSYSTEM?tab=readme-ov-file#main-functions-explained) <br>
