@@ -1,10 +1,10 @@
 # Nixhekoo's System
-0. [About the Header](https://github.com/Nixhekoo/NXHKSYSTEM?tab=readme-ov-file#about-the-header) <br>
-1. [How to Use](https://github.com/Nixhekoo/NXHKSYSTEM?tab=readme-ov-file#how-to-use) <br>
-2. [Main Functions Explained](https://github.com/Nixhekoo/NXHKSYSTEM?tab=readme-ov-file#main-functions-explained) <br>
-3. [Side Functions Explained](https://github.com/Nixhekoo/NXHKSYSTEM?tab=readme-ov-file#side-functions-explained) <br>
-4. [Data Type Conversion](https://github.com/Nixhekoo/NXHKSYSTEM?tab=readme-ov-file#data-type-conversion) <br>
-5. [Combining The Functions](https://github.com/Nixhekoo/NXHKSYSTEM?tab=readme-ov-file#combining-the-functions) <br>
+- [About the Header](https://github.com/Nixhekoo/NXHKSYSTEM?tab=readme-ov-file#about-the-header) <br>
+- [How to Use](https://github.com/Nixhekoo/NXHKSYSTEM?tab=readme-ov-file#how-to-use) <br>
+- [Main Functions Explained](https://github.com/Nixhekoo/NXHKSYSTEM?tab=readme-ov-file#main-functions-explained) <br>
+- [Side Functions Explained](https://github.com/Nixhekoo/NXHKSYSTEM?tab=readme-ov-file#side-functions-explained) <br>
+- [Data Type Conversion](https://github.com/Nixhekoo/NXHKSYSTEM?tab=readme-ov-file#data-type-conversion) <br>
+- [Combining The Functions](https://github.com/Nixhekoo/NXHKSYSTEM?tab=readme-ov-file#combining-the-functions) <br>
 
 # About the Header
 - A helpful header for people who don't know how to properly save their game in C++. This header will help you with all file managment you would ever need when saving data to files in your PC.
