@@ -32,139 +32,55 @@
 ```
 
 # All Functions
-- Set
-  - NXHK_SET_CONSOLE_CURSOR_POSITION
-  - NXHK_SET_CONSOLE_TITLE
-  - NXHK_SET_FILE_DIRECTORY
-  - NXHK_SET_CONSOLE_COLOR
-- Reset
+### Set
+  - NXHK_SET_CONSOLE_CURSOR_POSITION (X, Y)
+  > Sets Console Cursor Position to X and Y Coordinates
+  - NXHK_SET_CONSOLE_TITLE (TITLE)
+  > Changes Console Title
+  - NXHK_SET_FILE_DIRECTORY (PATH)
+  > Creates path inside LocalAppData
+  - NXHK_SET_CONSOLE_COLOR (COLOR NUMBER)
+  > Changes Console Text Color
+### Reset
   - NXHK_RESET_CONSOLE_CURSOR_POSITION
-- Get
+  > Sets Console Cursor Position to X = 0 and Y = 0
+### Get
   - NXHK_GET_MOUSE_POSITION_X
+  > Returns Mouse Position X
   - NXHK_GET_MOUSE_POSITION_Y
+  > Returns Mouse Position Y
   - NXHK_GET_SCREEN_SIZE_X
+  > Returns Screen Size on X
   - NXHK_GET_SCREEN_SIZE_Y
+  > Returns Screen Size on Y
   - NXHK_GET_MONITORS_AMMOUNT
-- Create
-  - NXHK_CREATE_PATH
-  - NXHK_CREATE_ENCRYPT_SEED
-- Check
-  - NXHK_CHECK_IF_FILE_EXISTS
-- Convert
+  > Returns Ammount of Monitors Connected
+### Create
+  - NXHK_CREATE_PATH (PATH)
+  > Creates Directory Specified
+  - NXHK_CREATE_ENCRYPT_SEED (ENCRYPT POWER, LOADING BAR LENGHT, LOADING BAR TEXT)
+  > Creates Seed for Encryption and Decryption
+### Check
+  - NXHK_CHECK_IF_FILE_EXISTS (FOLDERPATH, FILENAME)
+  > Checks if File Exists in your PC
+### Convert
   - NXHK_CONVERT_TO_STRING
+  > Converts Anything to String
   - NXHK_CONVERT_TO_INT
+  > Converts String to Integer
   - NXHK_CONVERT_TO_BOOL
+  > Converts String to Bool
   - NXHK_CONVERT_TO_FLOAT
+  > Converts String to Float
   - NXHK_CONVERT_TO_CHAR
-- Encrypt / Decrypt
-  - NXHK_ENCRYPT_MESSAGE
-  - NXHK_DECRYPT_MESSAGE
-- Save / Load
-  - NXHK_SAVE_TO_FILE
-  - NXHK_LOAD_FROM_FILE
-
-# Main Functions Explained
-> [!IMPORTANT]
-> ***Explanation & The Correct Types!*** <br>
-> <br>
-> ***PathToFolder*** = String <br>
-> ***FileName*** = String <br>
-> ***ContentToSave*** = Any Type <br>
-> ***SpecifiedLine*** = Integer <br>
-> ***PathFromLocalappdata*** = String <br>
-1. PathToFolder = *This is the path to the folder where you want your files to be saved in. If you want to have your files saved in localappdata of Windows, use the [NXHK_FILEDIR](https://github.com/Nixhekoo/NXHKSYSTEM?tab=readme-ov-file#nxhk_filedir) function*
-2. FileName = *This is the name of the file where the data should be stored. The data can be stored in almost any file type.*
-3. ContentToSave = *This is the content you want to save. If you dont like converting types to string, use the [NXHK_TOSTRING](https://github.com/Nixhekoo/NXHKSYSTEM?tab=readme-ov-file#nxhk_tostring) function to help you*
-4. SpecifiedLine = *This is the specified line by user, that determines on which line you want to save the ***ContentToSave***.*
-5. PathFromLocalappdata = Only availible in [NXHK_FILEDIR](https://github.com/Nixhekoo/NXHKSYSTEM?tab=readme-ov-file#nxhk_filedir) function. Path of the folder from localappdata. Example: if you want to create folder in Localappdata with name Folder90, you would do so like this:
-```
-NXHK_FILEDIR("Folder90");
-```
-
-## NXHK_SAVE 💾
-- The syntax for this function is as follows:
-```
-NXHK_SAVE(PathToFolder, FileName, ContentToSave, SpecifiedLine);
-```
-
-## NXHK_LOAD 💾
-- The syntax for this function is as follows:
-```
-std::string TestVariable;
-TestVariable = NXHK_LOAD(PathToFolder, FileName, SpecifiedLine);
-```
-- This function will return the value of the Line from the specified File as String. 
-
-# Side Functions Explained
-## NXHK_TOSTRING
-- The correct syntax for this function is:
-```
-NXHK_TOSTRING(AnythingYouWant);
-```
-- The correct syntax to use this function inside ***NXHK_SAVE*** is:
-```
-NXHK_SAVE(PathToFolder, FileName, NXHK_TOSTRING(ContentToSave), SpecifiedLine);
-```
-1. AnythingYouWant = You can enter information of any data type and it will get converted to String. Useful for NXHK_SAVE
-
-## NXHK_FILEDIR
-> [!IMPORTANT]
-> Use "" symbols around the PathToFolder inside NXHK_FILEDIR function.
-```
-NXHK_FILEDIR(PathFromLocalappdata);
-```
-- The correct syntax to use this function inside ***NXHK_SAVE*** or ***NXHK_LOAD*** is:
-```
-// SAVE FUNCTION
-NXHK_SAVE(NXHK_FILEDIR("PathFromLocalappdata"), FileName, ContentToSave, SpecifiedLine);
-
-// LOAD FUNCTION
-std::string TestVariable;
-TestVariable = NXHK_LOAD(NXHK_FILEDIR("PathFromLocalappdata"), FileName, SpecifiedLine);
-```
-1. PathFromLocalappdata = This is the path that will be placed in Localappdata of Windows. For example this:
-```
-NXHK_FILEDIR(Projects\Folder);
-```
-Will create Path like this:
-```
-C:\Users\Admin\AppData\Local\Projects\Folder
-```
-> [!IMPORTANT]
-> Do NOT use backslash at the beginning of the Path, that will be automatically added by the function!
-
-## NXHK_FILEEXISTS
-- Function that checks if the save file exists. Correct syntax is as follows:
-```
-NXHK_FILEEXISTS(PathToFolder, FileName);
-```
-- Best paired with [NXHK_FILEDIR](https://github.com/Nixhekoo/NXHKSYSTEM?tab=readme-ov-file#nxhk_filedir) like so:
-```
-NXHK_FILEEXISTS(NXHK_FILEDIR(PathFromLocalappdata), FileName);
-```
-
-# DATA TYPE CONVERSION
-- Use ***NXHK_TO_STRING*** to convert a data type to string.
-- Use ***NXHK_TO_INT*** to convert a string to Integer.
-- Use ***NXHK_TO_FLOAT*** to convert a string to Floating Number.
-- Use ***NXHK_TO_BOOL*** to convert a string to Boolian.
-- Use ***NXHK_TO_CHAR*** to convert a string to Character.
-> [!TIP]
-> Combine these types with ***NXHK_LOAD*** to make Loading Data Easier! <br>
-> <br>
-> Example:
-```
-float TestVariable;
-TestVariable = NXHK_TO_FLOAT(NXHK_LOAD(NXHK_FILEDIR("PathToFolder"), FileName, SpecifiedLine));
-```
-
-# Combining The Functions
-- You can also combine multiple functions into one. (Atleast those that are compatibile with eachother). As of right now, only NXHK_SAVE and NXHK_LOAD are compatibile with other functions.
-```
-// SAVE FUNCTION
-NXHK_SAVE(NXHK_FILEDIR(PathToFolder), FileName, NXHK_TOSTRING(ContentToSave), SpecifiedLine);
-
-// LOAD FUNCTION
-std::string TestVariable;
-TestVariable = NXHK_TO_INT(NXHK_LOAD(NXHK_FILEDIR(PathToFolder), FileName, SpecifiedLine));
-```
+  > Converts String to Character
+### Encrypt / Decrypt
+  - NXHK_ENCRYPT_MESSAGE (MESSAGE, ENCRYPTSEED)
+  > Encrypts Message using EncryptSeed
+  - NXHK_DECRYPT_MESSAGE (MESSAGE, ENCRYPTSEED)
+  > Decrypts Message using EncryptSeed
+### Save / Load
+  - NXHK_SAVE_TO_FILE (FOLDERPATH, FILENAME, CONTENT TO SAVE, LINE TO SAVE ON)
+  > Saves Content to Specified File in Specified Directory on Specified Line
+  - NXHK_LOAD_FROM_FILE (FOLDERPATH, FILENAME, LINE TO LOAD FROM)
+  > Loads Content from Specified File in Specified Directory from Specified Line
