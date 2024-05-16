@@ -3,9 +3,6 @@
 - [How to Use](https://github.com/Nixhekoo/NXHKSYSTEM?tab=readme-ov-file#how-to-use) <br>
 - [Main Functions Explained](https://github.com/Nixhekoo/NXHKSYSTEM?tab=readme-ov-file#main-functions-explained) <br>
 - [All Functions]() <br>
-- [Side Functions Explained](https://github.com/Nixhekoo/NXHKSYSTEM?tab=readme-ov-file#side-functions-explained) <br>
-- [Data Type Conversion](https://github.com/Nixhekoo/NXHKSYSTEM?tab=readme-ov-file#data-type-conversion) <br>
-- [Combining The Functions](https://github.com/Nixhekoo/NXHKSYSTEM?tab=readme-ov-file#combining-the-functions) <br>
 
 # About the Header
 - A helpful header for people who don't know how to properly save their game in C++. This header will help you with all file managment you would ever need when saving data to files in your PC.
@@ -20,15 +17,15 @@
 ## How to include the header (3 Ways)
 1. In your main project file, include the file by typing in the PATH to the file like this:
 ```
-#include "C:\Users\Admin\Documents\Headers\NXHK_FILESYSTEM.hpp"
+#include "C:\Users\Admin\Documents\Headers\NXHKSYSTEM.hpp"
 ```
 2. If you are gonna place the header file in same directory as the main file, you can use this:
 ```
-#include "NXHK_FILESYSTEM.hpp"
+#include "NXHKSYSTEM.hpp"
 ```
 3. If you are gonna place the header file in same directory as the main file BUT in it's own specific folder, you can use this:
 ```
-#include "Folder\NXHK_FILESYSTEM.hpp"
+#include "Folder\NXHKSYSTEM.hpp"
 ```
 
 # All Functions
