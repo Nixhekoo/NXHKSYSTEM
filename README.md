@@ -1,17 +1,17 @@
 # Nixhekoo's File System
-0. [About the Header](https://github.com/Nixhekoo/NXHK_FILESYSTEM?tab=readme-ov-file#about-the-header) <br>
-1. [How to Use](https://github.com/Nixhekoo/NXHK_FILESYSTEM?tab=readme-ov-file#how-to-use) <br>
-2. [Main Functions Explained](https://github.com/Nixhekoo/NXHK_FILESYSTEM?tab=readme-ov-file#main-functions-explained) <br>
-3. [Side Functions Explained](https://github.com/Nixhekoo/NXHK_FILESYSTEM?tab=readme-ov-file#side-functions-explained) <br>
-4. [Data Type Conversion](https://github.com/Nixhekoo/NXHK_FILESYSTEM?tab=readme-ov-file#data-type-conversion) <br>
-5. [Combining The Functions](https://github.com/Nixhekoo/NXHK_FILESYSTEM?tab=readme-ov-file#combining-the-functions) <br>
+0. [About the Header](https://github.com/Nixhekoo/NXHKSYSTEM?tab=readme-ov-file#about-the-header) <br>
+1. [How to Use](https://github.com/Nixhekoo/NXHKSYSTEM?tab=readme-ov-file#how-to-use) <br>
+2. [Main Functions Explained](https://github.com/Nixhekoo/NXHKSYSTEM?tab=readme-ov-file#main-functions-explained) <br>
+3. [Side Functions Explained](https://github.com/Nixhekoo/NXHKSYSTEM?tab=readme-ov-file#side-functions-explained) <br>
+4. [Data Type Conversion](https://github.com/Nixhekoo/NXHKSYSTEM?tab=readme-ov-file#data-type-conversion) <br>
+5. [Combining The Functions](https://github.com/Nixhekoo/NXHKSYSTEM?tab=readme-ov-file#combining-the-functions) <br>
 
 # About the Header
 - A helpful header for people who don't know how to properly save their game in C++. This header will help you with all file managment you would ever need when saving data to files in your PC.
 
 # How to Use
 - THE HEADER IS WINDOWS ONLY!
-- Download the [NXHK_FILESYSTEM.zip](https://github.com/Nixhekoo/NXHK_FILESYSTEM/archive/refs/heads/main.zip)
+- Download the [NXHK_FILESYSTEM.zip](https://github.com/Nixhekoo/NXHKSYSTEM/archive/refs/heads/main.zip)
 - If the browser blocks the download for suspicion of a Virus, click "Download Anyways" *(This is because you are downloading Standalone Executable File)*
 - *(If While trying to run the game Windows Defender blocks the file, click "More Information" and "Run Anyways")*
 - *(If Windows Antivirus blocks the file, disable antivirus or allow the file to be downloaded)*
@@ -39,11 +39,11 @@
 > ***ContentToSave*** = Any Type <br>
 > ***SpecifiedLine*** = Integer <br>
 > ***PathFromLocalappdata*** = String <br>
-1. PathToFolder = *This is the path to the folder where you want your files to be saved in. If you want to have your files saved in localappdata of Windows, use the [NXHK_FILEDIR](https://github.com/Nixhekoo/NXHK_FILESYSTEM?tab=readme-ov-file#nxhk_filedir) function*
+1. PathToFolder = *This is the path to the folder where you want your files to be saved in. If you want to have your files saved in localappdata of Windows, use the [NXHK_FILEDIR](https://github.com/Nixhekoo/NXHKSYSTEM?tab=readme-ov-file#nxhk_filedir) function*
 2. FileName = *This is the name of the file where the data should be stored. The data can be stored in almost any file type.*
-3. ContentToSave = *This is the content you want to save. If you dont like converting types to string, use the [NXHK_TOSTRING](https://github.com/Nixhekoo/NXHK_FILESYSTEM?tab=readme-ov-file#nxhk_tostring) function to help you*
+3. ContentToSave = *This is the content you want to save. If you dont like converting types to string, use the [NXHK_TOSTRING](https://github.com/Nixhekoo/NXHKSYSTEM?tab=readme-ov-file#nxhk_tostring) function to help you*
 4. SpecifiedLine = *This is the specified line by user, that determines on which line you want to save the ***ContentToSave***.*
-5. PathFromLocalappdata = Only availible in [NXHK_FILEDIR](https://github.com/Nixhekoo/NXHK_FILESYSTEM?tab=readme-ov-file#nxhk_filedir) function. Path of the folder from localappdata. Example: if you want to create folder in Localappdata with name Folder90, you would do so like this:
+5. PathFromLocalappdata = Only availible in [NXHK_FILEDIR](https://github.com/Nixhekoo/NXHKSYSTEM?tab=readme-ov-file#nxhk_filedir) function. Path of the folder from localappdata. Example: if you want to create folder in Localappdata with name Folder90, you would do so like this:
 ```
 NXHK_FILEDIR("Folder90");
 ```
@@ -105,7 +105,7 @@ C:\Users\Admin\AppData\Local\Projects\Folder
 ```
 NXHK_FILEEXISTS(PathToFolder, FileName);
 ```
-- Best paired with [NXHK_FILEDIR](https://github.com/Nixhekoo/NXHK_FILESYSTEM?tab=readme-ov-file#nxhk_filedir) like so:
+- Best paired with [NXHK_FILEDIR](https://github.com/Nixhekoo/NXHKSYSTEM?tab=readme-ov-file#nxhk_filedir) like so:
 ```
 NXHK_FILEEXISTS(NXHK_FILEDIR(PathFromLocalappdata), FileName);
 ```
