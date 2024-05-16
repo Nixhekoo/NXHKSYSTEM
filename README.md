@@ -1,7 +1,6 @@
 # Nixhekoo's System
 - [About the Header](https://github.com/Nixhekoo/NXHKSYSTEM?tab=readme-ov-file#about-the-header) <br>
 - [How to Use](https://github.com/Nixhekoo/NXHKSYSTEM?tab=readme-ov-file#how-to-use) <br>
-- [Main Functions Explained](https://github.com/Nixhekoo/NXHKSYSTEM?tab=readme-ov-file#main-functions-explained) <br>
 - [All Functions](https://github.com/Nixhekoo/NXHKSYSTEM?tab=readme-ov-file#all-functions) <br>
 
 # About the Header
