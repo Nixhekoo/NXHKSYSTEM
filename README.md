@@ -4,7 +4,7 @@
 - [All Functions](https://github.com/Nixhekoo/NXHKSYSTEM?tab=readme-ov-file#all-functions) <br>
 
 # About the Header
-- A helpful header for people who don't know how to properly save their game in C++. This header will help you with all file managment you would ever need when saving data to files in your PC.
+- A helpful header for people who don't want to spend their lifetime creating functions they may need in their project. This header will help you with all file managment, console management, and other things you would ever need when creating your own C++ Project.
 
 # How to Use
 - THE HEADER IS WINDOWS ONLY!
