@@ -2,7 +2,7 @@
 - [About the Header](https://github.com/Nixhekoo/NXHKSYSTEM?tab=readme-ov-file#about-the-header) <br>
 - [How to Use](https://github.com/Nixhekoo/NXHKSYSTEM?tab=readme-ov-file#how-to-use) <br>
 - [Main Functions Explained](https://github.com/Nixhekoo/NXHKSYSTEM?tab=readme-ov-file#main-functions-explained) <br>
-- [All Functions]() <br>
+- [All Functions](https://github.com/Nixhekoo/NXHKSYSTEM?tab=readme-ov-file#all-functions) <br>
 
 # About the Header
 - A helpful header for people who don't know how to properly save their game in C++. This header will help you with all file managment you would ever need when saving data to files in your PC.
